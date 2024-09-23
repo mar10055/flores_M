@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ahí están tus flores amarillas</title>
+    <title>Flores Amarillas Estilo Avanzado</title>
     <style>
         body {
-            background-color: #000;
+            background-color: #001d2e;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -14,75 +14,103 @@
             margin: 0;
             font-family: Arial, sans-serif;
             color: #fff;
+            overflow: hidden;
         }
+
         .container {
             text-align: center;
         }
-        .flowers {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-        }
+
         .flower {
             position: relative;
-            width: 100px;
-            height: 150px; /* Aumentamos para incluir el tallo */
+            width: 150px;
+            height: 200px;
+            margin: 0 20px;
         }
-        .petal {
-            position: absolute;
-            width: 50px;
-            height: 50px;
-            background-color: yellow;
-            border-radius: 50%;
-        }
-        .petal:nth-child(1) { top: 0; left: 25px; }
-        .petal:nth-child(2) { top: 25px; left: 0; }
-        .petal:nth-child(3) { top: 25px; right: 0; }
-        .petal:nth-child(4) { bottom: 50px; left: 25px; }
-        .center {
-            position: absolute;
-            top: 35px;
-            left: 30px;
-            width: 40px;
-            height: 40px;
-            background-color: orange;
-            border-radius: 50%;
-        }
-        /* Tallos */
-        .stem {
+
+        .flower .stem {
             position: absolute;
             bottom: 0;
-            left: 40px;
-            width: 20px;
-            height: 60px;
+            left: 50%;
+            width: 8px;
+            height: 100px;
             background-color: green;
+            border-radius: 10px;
+            transform: translateX(-50%);
         }
+
+        .flower .leaf {
+            position: absolute;
+            bottom: 30px;
+            width: 60px;
+            height: 30px;
+            background-color: green;
+            border-radius: 50%;
+        }
+
+        .flower .leaf.left {
+            left: -30px;
+            transform: rotate(30deg);
+        }
+
+        .flower .leaf.right {
+            right: -30px;
+            transform: rotate(-30deg);
+        }
+
+        .flower .petal {
+            position: absolute;
+            background-color: yellow;
+            width: 60px;
+            height: 60px;
+            border-radius: 50% 50% 0 0;
+        }
+
+        .flower .petal.top {
+            top: 20px;
+            left: 45px;
+        }
+
+        .flower .petal.left {
+            top: 40px;
+            left: 0;
+            transform: rotate(-45deg);
+        }
+
+        .flower .petal.right {
+            top: 40px;
+            right: 0;
+            transform: rotate(45deg);
+        }
+
+        .flower .center {
+            position: absolute;
+            top: 55px;
+            left: 35px;
+            width: 50px;
+            height: 50px;
+            background-color: orange;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(255, 165, 0, 0.8);
+        }
+
         h1 {
             font-size: 24px;
-            margin-bottom: 20px;
+            margin-bottom: 40px;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Ahí están tus flores amarillas <3</h1>
-        <div class="flowers">
-            <div class="flower">
-                <div class="petal"></div>
-                <div class="petal"></div>
-                <div class="petal"></div>
-                <div class="petal"></div>
-                <div class="center"></div>
-                <div class="stem"></div> <!-- Añadimos el tallo -->
-            </div>
-            <div class="flower">
-                <div class="petal"></div>
-                <div class="petal"></div>
-                <div class="petal"></div>
-                <div class="petal"></div>
-                <div class="center"></div>
-                <div class="stem"></div> <!-- Añadimos el tallo -->
-            </div>
+        <h1>Flores Amarillas Hermosas</h1>
+        <div class="flower">
+            <div class="stem"></div>
+            <div class="leaf left"></div>
+            <div class="leaf right"></div>
+            <div class="petal top"></div>
+            <div class="petal left"></div>
+            <div class="petal right"></div>
+            <div class="center"></div>
         </div>
     </div>
 </body>
