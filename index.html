@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flores Amarillas Estilo Avanzado</title>
+    <title>Flores Amarillas Naturales</title>
     <style>
         body {
-            background-color: #001d2e;
+            background-color: #002a2e;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -14,7 +14,6 @@
             margin: 0;
             font-family: Arial, sans-serif;
             color: #fff;
-            overflow: hidden;
         }
 
         .container {
@@ -24,7 +23,7 @@
         .flower {
             position: relative;
             width: 150px;
-            height: 200px;
+            height: 250px;
             margin: 0 20px;
         }
 
@@ -33,7 +32,7 @@
             bottom: 0;
             left: 50%;
             width: 8px;
-            height: 100px;
+            height: 150px;
             background-color: green;
             border-radius: 10px;
             transform: translateX(-50%);
@@ -41,21 +40,22 @@
 
         .flower .leaf {
             position: absolute;
-            bottom: 30px;
-            width: 60px;
-            height: 30px;
+            width: 40px;
+            height: 20px;
             background-color: green;
             border-radius: 50%;
         }
 
         .flower .leaf.left {
-            left: -30px;
-            transform: rotate(30deg);
+            left: -20px;
+            bottom: 50px;
+            transform: rotate(-30deg);
         }
 
         .flower .leaf.right {
-            right: -30px;
-            transform: rotate(-30deg);
+            right: -20px;
+            bottom: 50px;
+            transform: rotate(30deg);
         }
 
         .flower .petal {
@@ -63,55 +63,27 @@
             background-color: yellow;
             width: 60px;
             height: 60px;
-            border-radius: 50% 50% 0 0;
+            border-radius: 50%;
         }
 
         .flower .petal.top {
-            top: 20px;
+            top: 0;
             left: 45px;
         }
 
         .flower .petal.left {
-            top: 40px;
-            left: 0;
-            transform: rotate(-45deg);
+            top: 30px;
+            left: 15px;
         }
 
         .flower .petal.right {
-            top: 40px;
-            right: 0;
-            transform: rotate(45deg);
+            top: 30px;
+            right: 15px;
         }
 
-        .flower .center {
-            position: absolute;
-            top: 55px;
-            left: 35px;
-            width: 50px;
-            height: 50px;
-            background-color: orange;
-            border-radius: 50%;
-            box-shadow: 0 0 15px rgba(255, 165, 0, 0.8);
+        .flower .petal.bottom {
+            top: 60px;
+            left: 45px;
         }
 
-        h1 {
-            font-size: 24px;
-            margin-bottom: 40px;
-        }
-    </style>
-</head>
-<body>
-    <div class="container">
-        <h1>Flores Amarillas Hermosas</h1>
-        <div class="flower">
-            <div class="stem"></div>
-            <div class="leaf left"></div>
-            <div class="leaf right"></div>
-            <div class="petal top"></div>
-            <div class="petal left"></div>
-            <div class="petal right"></div>
-            <div class="center"></div>
-        </div>
-    </div>
-</body>
-</html>
+        .flower
